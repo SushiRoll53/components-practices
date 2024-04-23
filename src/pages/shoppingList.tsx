@@ -6,6 +6,12 @@ function ShoppingList() {
         { name: "Carrot", price: 0.30 },
     ];
 
+    // Example on how the return should look 
+    // after spliting in into component
+    // <Header />
+    // <ProductList />
+    // <Footer />
+
     return (
         <div>
             <header>
