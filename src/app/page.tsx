@@ -1,29 +1,21 @@
 import type { NextPage } from 'next';
+import ComposedComponent from '../components/composedcomponent'
+import HC from '../pages/Hana/hanaComponent'
 
 const Home: NextPage = () => {
+
+  const HCbuttonText = "Click Hana btn!"; // Text for the button
+
   return (
     <div>
       <h1>EPLabsMo</h1>
-      <p>Help us</p>
-      <table>
-        <tbody>
-          <tr>
-            <td>Row 1, Col 1</td>
-            <td>Row 1, Col 2</td>
-            <td>Row 1, Col 3</td>
-          </tr>
-          <tr>
-            <td>Row 2, Col 1</td>
-            <td>Row 2, Col 2</td>
-            <td>Row 2, Col 3</td>
-          </tr>
-          <tr>
-            <td>Row 3, Col 1</td>
-            <td>Row 3, Col 2</td>
-            <td>Row 3, Col 3</td>
-          </tr>
-        </tbody>
-      </table>
+      <h2>The Demo's A Composed Component</h2>
+      <p>Every Jr. Dev worked on individual Components.</p>
+      <p>Which were then merged into a branch for this project.</p>
+      <p>Below is a component composed from their component</p>
+      <ComposedComponent>
+        <HC buttonText={HCbuttonText}/>
+      </ComposedComponent>
     </div>
   );
 };

@@ -1,6 +1,11 @@
 import React from 'react';
 
-function HC({ onClick , buttonText }) {
+type HCProps = {
+  onClick?: () => void; // Define the type for the onClick event handler
+  buttonText: string;        // Define the type for the text prop
+};
+
+const HC: React.FC<HCProps> = ({ onClick , buttonText }) => {
   return (
     <button
       style={{
@@ -12,7 +17,6 @@ function HC({ onClick , buttonText }) {
         border: 'none',
         cursor: 'pointer',
       }}
-      onClick={onClick}
     >
       {buttonText}
     </button>
